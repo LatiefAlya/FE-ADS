@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detiktravel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./home.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend Deca:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="home" id="home">
+      <section class="cover-parent">
+        <div class="cover" id="main-cover">
+          <div class="frame"></div>
+          <div class="cover-inner">
+            <div class="asset-1-1-parent">
+              <img
+                class="asset-1-1"
+                loading="lazy"
+                alt=""
+                src="./public/asset-1-1@2x.png"
+              />
+
+              <a href="#tentang-program">
+                <button class="button6">
+                  <b class="daftar-sekarang">TENTANG PROGRAM</b>
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="photo-1-parent">
+            <img
+              class="photo-1-icon12"
+              loading="lazy"
+              alt=""
+              src="./public/photo1-1@2x.png"
+              onclick="changeCoverAndBringToFront(this, './public/cover@3x.png')"
+            />
+
+            <img
+              class="photo-1-icon12"
+              loading="lazy"
+              alt="Description of the image"
+              src="./public/photo21@2x.png"
+              onclick="changeCoverAndBringToFront(this, './public/cover@2x.png')"
+            />
+
+            <img
+              class="photo-1-icon12"
+              loading="lazy"
+              alt=""
+              src="./public/photo3@2x.png"
+              onclick="changeCoverAndBringToFront(this, './public/cover@4x.png')"
+            />
+          </div>
+        </div>
+        <header class="navbar">
+          <img
+            class="group-icon"
+            loading="lazy"
+            alt=""
+            src="./public/group@2x.png"
+          />
+
+          <div class="nav-menu3">
+            <div class="single-menu" href="home.html">
+              <a href="#home" class="single-menu5">Home</a>
+            </div>
+
+            <div class="single-menu">
+              <a href="#tentang-program" class="single-menu3"
+                >Tentang Program</a
+              >
+            </div>
+            <div class="single-menu">
+              <a href="#berita" class="single-menu5">Berita</a>
+            </div>
+            <a href="registrasi.html" class="button7">
+              <span class="daftar-sekarang1">Registrasi</span>
+            </a>
+          </div>
+        </header>
+      </section>
+      <script>
+        function changeCover(imageUrl) {
+          const cover = document.getElementById("main-cover");
+          cover.style.backgroundImage = `url(${imageUrl})`;
+        }
+      </script>
+      <script>
+        function changeCover(imageUrl) {
+          const cover = document.getElementById("main-cover");
+          cover.style.backgroundImage = `url(${imageUrl})`;
+          cover.style.backgroundSize = "cover";
+          cover.style.backgroundRepeat = "no-repeat";
+          cover.style.backgroundPosition = "center";
+        }
+      </script>
+      <script>
+        function changeCoverAndBringToFront(imageElement, newCoverSrc) {
+          // Change the cover image
+          document.getElementById(
+            "main-cover"
+          ).style.backgroundImage = `url(${newCoverSrc})`;
+
+          // Reset z-index for all images
+          const images = document.querySelectorAll(".photo-1-icon12");
+          images.forEach((img) => {
+            img.style.zIndex = "1";
+            img.style.transform = "scale(1)"; // Reset any scaling
+          });
+
+          // Bring the clicked image to the front
+          imageElement.style.zIndex = "10";
+          imageElement.style.transform = "scale(1.1)"; // Optional: Add a scaling effect to highlight the clicked image
+        }
+      </script>
+
+      <section class="about" id="tentang-program">
+        <div class="frame"></div>
+        <img
+          class="about-image-1-icon"
+          loading="lazy"
+          alt=""
+          src="./public/aboutimage-1@2x.png"
+        />
+
+        <div class="about-content">
+          <div class="about-paragraph-parent">
+            <div class="about-paragraph">
+              <h1 class="tentang-program">Tentang Program</h1>
+              <div class="bergabunglah-dalam-explore">
+                Bergabunglah dalam "Explore Thailand bersama Detiktravel"!
+                Kompetisi ini terbuka bagi pembaca Detiktravel yang ingin
+                menikmati perjalanan ke Thailand. Kunjungi destinasi menakjubkan
+                seperti pantai Pak Bia Island dan destinasi lain di Phuket,
+                Thailand. Jadi bagian dari perjalanan kami dan menangkan hadiah
+                jalan-jalan yang tak terlupakan!
+              </div>
+            </div>
+            <a href="registrasi.html" class="button6">
+              <b class="daftar-sekarang">DAFTAR SEKARANG</b>
+            </a>
+          </div>
+          <div class="form-steps">
+            <h1 class="mekanisme">Mekanisme</h1>
+            <div class="step-rows-parent">
+              <div class="step-rows">
+                <input class="step-icons" type="radio" />
+
+                <div class="step-rows-child"></div>
+              </div>
+              <div class="step-titles">
+                <div class="step-details">
+                  <h3 class="isi-formulir">Isi Formulir</h3>
+                  <b class="mei-2023">1 - 31 Mei 2023 </b>
+                </div>
+                <div class="lengkapi-formulir-pendaftaran">
+                  Lengkapi formulir pendaftaran dengan data sebenarnya
+                </div>
+              </div>
+            </div>
+            <div class="step-rows-parent">
+              <div class="step-rows">
+                <input class="step-icons" type="radio" />
+
+                <div class="step-rows-child"></div>
+              </div>
+              <div class="step-titles">
+                <div class="isi-formulir-parent">
+                  <h3 class="isi-formulir1">Penjurian</h3>
+                  <b class="mei-20231">1 - 7 Juni 2023 </b>
+                </div>
+                <div class="lengkapi-formulir-pendaftaran">
+                  Ikuti rangkaian penjurian online/offline
+                </div>
+              </div>
+            </div>
+            <div class="step-rows-parent">
+              <div class="frame-parent3">
+                <input class="step-icons" type="radio" />
+
+                <div class="frame-child19"></div>
+              </div>
+              <div class="step-titles">
+                <div class="isi-formulir-group">
+                  <h3 class="isi-formulir">Pengumuman Pemenang</h3>
+                  <b class="mei-2023">11 Juni 2023 </b>
+                </div>
+                <div class="lengkapi-formulir-pendaftaran">
+                  Ikuti rangkaian penjurian online/offline
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="aggregator" id="berita">
+        <div class="frame2"></div>
+        <div class="aggregator-header">
+          <div class="group-wrapper">
+            <img class="group-icon1" alt="" src="./public/group-1@2x.png" />
+          </div>
+          <h1 class="update">Update</h1>
+        </div>
+        <div class="news-list">
+          <div class="thumbnail-artikel-1-parent">
+            <div class="thumbnail-artikel-1">
+              <img
+                class="artikel-1-1-icon"
+                alt=""
+                src="./public/artikel1-1@2x.png"
+              />
+
+              <div class="thumbnail-artikel-11"></div>
+            </div>
+            <div class="card-data">
+              <div class="card-title">
+                <h3 class="mk-tolak-gugatan">
+                  Warga Thailand Pakai Boneka Doraemon untuk Ritual Pemanggil
+                  Hujan
+                </h3>
+              </div>
+              <div class="card-date">
+                <div class="jam-yang-lalu">3 jam yang lalu</div>
+              </div>
+            </div>
+          </div>
+          <div class="secondary-news">
+            <div class="thumbnail-article-16-9-parent">
+              <img
+                class="thumbnail-article-16-9-icon"
+                loading="lazy"
+                alt=""
+                src="./public/thumbnailarticle16-9@2x.png"
+              />
+
+              <div class="secondary-data">
+                <b class="warga-thailand-pakai"
+                  >Thailand Ngarep Cuan Banyak dari Turis China dan Jepang</b
+                >
+                <div class="jam-yang-lalu1">1 jam yang lalu</div>
+              </div>
+            </div>
+            <div class="thumbnail-article-16-9-parent">
+              <img
+                class="thumbnail-article-16-9-icon"
+                loading="lazy"
+                alt=""
+                src="./public/thumbnailarticle16-9-1@2x.png"
+              />
+
+              <div class="secondary-data">
+                <b class="warga-thailand-pakai"
+                  >Cahaya Lampu Hiasi Kuil Wat Phra Dhammakaya Thailand Saat
+                  Waisak</b
+                >
+                <div class="jam-yang-lalu1">1 jam yang lalu</div>
+              </div>
+            </div>
+            <div class="thumbnail-article-16-9-parent">
+              <img
+                class="thumbnail-article-16-9-icon"
+                loading="lazy"
+                alt=""
+                src="./public/thumbnailarticle16-9-2@2x.png"
+              />
+
+              <div class="secondary-data">
+                <b class="warga-thailand-pakai"
+                  >Cantiknya Lisa BLACKPINK Berwisata Sejarah di Thailand</b
+                >
+                <div class="jam-yang-lalu1">1 jam yang lalu</div>
+              </div>
+            </div>
+            <button class="lihat-berita-lainnya-parent">
+              <b class="lihat-berita-lainnya">Lihat Berita Lainnya</b>
+              <img
+                class="news-button-icon"
+                alt=""
+                src="./public/news-button-icon.svg"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer class="footer3">
+        <img
+          class="asset-1-11"
+          loading="lazy"
+          alt=""
+          src="./public/asset-1-1-1@2x.png"
+        />
+
+        <div class="footer-content3">
+          <div class="bergabunglah-dalam-explore1">
+            Bergabunglah dalam "Explore Thailand bersama Detiktravel"! Kompetisi
+            ini terbuka bagi pembaca Detiktravel yang ingin menikmati perjalanan
+            ke Thailand. Kunjungi destinasi menakjubkan seperti pantai Pak Bia
+            Island dan destinasi lain di Phuket, Thailand. Jadi bagian dari
+            perjalanan kami dan menangkan hadiah jalan-jalan yang tak
+            terlupakan!
+          </div>
+          <div class="footer-form">
+            <div class="atomstyphographyheading08-x-parent">
+              <div class="atomstyphographyheading08-x">
+                <div class="text-input">Connect With Us</div>
+              </div>
+              <div class="moleculessocmedcircle">
+                <img
+                  class="atomsiconssocmedcircleface"
+                  loading="lazy"
+                  alt=""
+                  src="./public/atomsiconssocmedcirclefacebook@2x.png"
+                />
+
+                <img
+                  class="atomsiconssocmedcircletwit"
+                  loading="lazy"
+                  alt=""
+                  src="./public/atomsiconssocmedcircletwitter@2x.png"
+                />
+
+                <img
+                  class="atomsiconssocmedcircleface"
+                  loading="lazy"
+                  alt=""
+                  src="./public/atomsiconssocmedcircleinstagram@2x.png"
+                />
+
+                <img
+                  class="atomsiconssocmedcircleface"
+                  loading="lazy"
+                  alt=""
+                  src="./public/atomsiconssocmedcirclelinkedin@2x.png"
+                />
+
+                <img
+                  class="atomsiconssocmedcircleface"
+                  loading="lazy"
+                  alt=""
+                  src="./public/atomsiconssocmedcircleyoutube@2x.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-child"></div>
+        <div class="landify-ui-kit">
+          Copyright @ 2023 detikcom. All right reserved
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
